@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+	<style>
+	body{
+	background-color: white;
+	
+	}
+	
+	
+	li{
+	 display: inline;
+	 padding: 20px;
+	 font-family:courier;
+	 font-size: 20pt;
+	 background-color:black;
+	 color:white;
+	
+	}
+	
+	
+	#container{
+	margin-left: auto;
+	margin-right:auto;
+	width:1000px;
+	background-color:white;
+	}
+	
+	
+	
+	body{
+	 background-color:#26282b;
+	}
+	
+	
+	<!--Index css below here -->
+	
+	#welcome{
+	
+	font-family:arial;
+	
+	
+	}
+	
+	#three{
+	border-style:solid;
+	padding:20%;
+	color:white;;
+	background-color:black;
+	
+	}
+	
+	#month{
+	border-style:solid;
+	padding:20%;
+	color:white;
+	background-color:black;
+	
+	
+	}
+	
+	#price{
+	margin-left:auto;
+	margin-right:auto;
+	
+	
+	}
+	
+	#indexContent{
+	border-color:white;
+	border-style:solid;
+	text-align:center;
+	width:800px;
+	padding-left:auto;
+	padding-right:auto;
+	}
+	</style>
+
+<script>
+
+ var imgArray = new Array(4);
+var index = 0;
+
+function cycle(){
+
+document.banner.src = imgArray[index].src;
+index++;
+if(index >3)
+{
+index =0;
+}
+setTimeout("cycle()", 3000);
+return;
+
+}
+
+function startup()
+{
+imgArray[0] = new Image;
+imgArray[0].src ="gymBag.jpeg";
+
+
+imgArray[1] = new Image;
+imgArray[1].src = "fighter.jpeg" ;
+
+imgArray[2] = new Image;
+imgArray[2].src = "boxing.jpg";
+
+//image found on bonfiresofsocialenterprise
+//http://bonfiresofsocialenterprise.com/downtown-youth-boxing-gym/
+imgArray[3] = new Image;
+imgArray[3].src = "boxingRing.jpg";
+cycle();
+return;
+
+}
+
+
+ 
+
+
+</script>
+</head>
+		
+
+
+<body onload = "startup()">
+<div id = "container">
+<h1 style = "font-size:34pt; text-align:center;">Matrial Arts Training Center</h1>
+		
+		<ul style = "text-align:center" id = "navUL">
+			<a href = "index.html"><li>Home</li></a>
+			<a href = "Service.html"><li>Service</li></a>
+			<a href ="Calendar.html"><li>Calender</li></a>
+			<a href = "Form.html"><li>Join Us</li></a>
+		
+		</ul>
+		
+		<br/>
+		
+		<center><img  name = "banner" src = "fighter.jpeg" height = "430px" width = "800px"></center>
+	
+		<h2 style = "text-align: center; text-decoration:underline;">Our Mission</h2>
+		<br/>
+		<center><b><p id = "indexContent"style = "font-size:20pt">Our mission is to help you be a better person than you were before.
+		We are here to teach you the art of the martial arts. Wheather your purpose is to show off that new move that you've just learned, 
+		defend yourself against an attacker or learn just for self improvement. There is no other training center other than Martial Arts Training Center
+		for you to start help develope your new lifestyle.</p></b></center>
+		
+		
+	
+		
+		
+	<table  id = "price">
+		<td><p id = "month" style ="font-size:26pt">ONLY $10.00 <br/>per/Month!</p></td>
+	<td><p id = "three" style = "font-size: 26pt">Walk in<br/> ONLY $3.00!</p></td>
+		</tr>
+		</table>
+		
+		<!-- <p style = "font-size: 20pt">Do you want to learn to fight? Do you want to learn to defend your self? or do you want to get into the sport?
+		WEll if yes to any of those things, then start here.</p> -->
+		
+		<center><h1>Any question? Feel free to contact us!</h1><address><p style = "font-size:20pt">Martial Arts Training Center</p>
+	<p style = "font-size:20pt">1123 Manhattan Ave Chicago, Il</p>
+	<p style = "font-size:20pt">773-332-1023</p>
+	<p style = "font-size:20pt"><a href = "mailto:Jimmol.Singh@mail.citytech.cuny.edu">MATC@gmail.com</a></p></address></center>
+		
+
+		
+</div>
+</body>
+
+
+
+</html>
