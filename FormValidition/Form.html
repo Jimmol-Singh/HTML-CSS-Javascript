@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+
+
+<html>
+<head>
+
+<script>
+ 
+  
+  function validate(){
+		// This is the first name
+		var fName = document.form.firstName;
+		if(fName.value == "")
+		{
+		
+		alert("Please enter your name");
+		fName.focus();
+		return false;
+		
+		}
+		
+		if(!isNaN(fName.value))
+		{
+		
+		alert("Letters are only allowed.");
+		fName.focus();
+		return false;
+		
+		}
+		
+	
+	   
+
+	
+
+		
+		
+		// this is the last name
+		var lName = document.form.lastName;
+		if(lName.value =="")
+  
+		{
+		alert("Please enter last name.");
+		lName.focus();
+		return false;
+		
+		}
+  
+		if(!isNaN(lName.value))
+		{
+		
+		alert("Letters are only allowed.");
+		lName.focus();
+		return false;
+		
+		}
+		
+		
+		
+		
+		
+		
+		//this is the password
+		var Password = document.form.pass;
+		if(Password.value =="")
+		{
+		alert("Please enter your password.");
+		Password.focus();
+		return false;
+		}
+		
+	
+		if(Password.value.length < 8)
+		{
+		alert("Password must be greater than 8 Characters");
+		Password.focus();
+		return false;
+		}
+		
+		
+		
+		
+		
+		
+  
+		//This is the email
+  
+		var Email = document.form.email;
+		if(Email.value == "")
+		{
+		alert("Please enter email");
+		Email.focus();
+		return false;	
+		}
+		
+		if (Email.value.indexOf("@", 0) < 0)
+		{
+		alert("Please enter a '@' valid e-mail address.");
+		Email.focus();
+		return false;
+		}
+
+		if (Email.value.indexOf(".", 0) < 0)
+		{
+		alert("Please enter a valid e-mail address with a '.' .");
+		Email.focus();
+		return false;
+		}
+		
+			
+					
+		
+		
+		//This is the telephone information
+  
+        var Telephone = document.form.phone;
+		if(Telephone.value =="")
+		{
+		alert("Please enter phone number.");
+		Telephone.focus();
+		return false;
+		
+		
+		}
+		
+		if(isNaN(Telephone.value))
+		{
+		
+		alert("Numbers are only allowed.");
+		Telephone.focus();
+		return false;
+		
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	   //This is the gender selection information
+		if((form.gender[0].checked == false)&& (form.gender[1].checked == false))
+		{
+		
+		
+		alert("Please select a gender(Male or Female)");
+		
+		return false;
+		
+		}                                                                             
+  
+		var Address = document.form.add;
+		if(Address.value =="")
+		{
+  
+		alert("Please enter address.");
+		Address.focus();
+		return false;
+  
+		}
+   
+ 
+  
+  
+  
+  
+  
+        //This is city information
+		var City = document.form.city;
+		if(City.value == "" )
+		{
+  		alert("Please enter city");
+		City.focus();
+		return false;
+		}
+  
+		if(!isNaN(City.value))
+		{
+		
+		alert("Letters are only allowed.");
+		City.focus();
+		return false;
+		
+		}
+  
+  
+  
+  
+  
+  
+  
+		var State = document.form.state;
+		if(State.value == "")
+  
+		{
+		alert("Please enter state.");
+		State.focus();
+		return false;
+		}
+		
+		if(!isNaN(State.value))
+		{
+		
+		alert("Letters are only allowed.");
+		State.focus();
+		return false;
+		
+		}
+		
+		
+		
+		
+		//This is the information about zip/postal code
+		
+  
+		var Zip = document.form.zip;
+		if(Zip.value == "")
+		{
+		alert("Please enter zip code.");
+		Zip.focus();
+		return false;
+  
+		}
+		
+		if(isNaN(Zip.value))
+		{
+		
+		alert("Numbers are only allowed.");
+		Zip.focus();
+		return false;
+		
+		}
+		
+		
+		
+		
+		
+		
+  
+  
+  
+		if((form.card[0].checked == false)&& (form.card[1].checked == false) && (form.card[2].checked == false) && (form.card[3].checked ==false))
+		{
+		
+		
+		alert("Please select your card type.");
+		return false;
+		
+		}                                     
+  
+  
+  
+  
+		//This is the information about the credit/debit card number
+  
+		var cardNum = document.form.cNum;
+		if(cardNum.value == "")
+		{
+		alert("Please enter Card Number.");
+		cardNum.focus();
+		return false;
+  
+		}
+		
+		if(isNaN(cardNum.value))
+		{
+		
+		alert("Numbers are only allowed.");
+		cardNum.focus();
+		return false;
+		
+		}
+		
+		
+		var Scode = document.form.sCode;
+		
+		if(Scode.value == "")
+		{
+		alert("Please enter your security card number.");
+		Scode.focus();
+		return false;
+		}
+		
+		if( isNaN(Scode.value) )
+		{
+		alert("NUmbers only.");
+		Scode.focus();
+		return false;
+		}
+		
+		
+		
+		
+		
+		//This is the information about expire month of card
+  
+		var ExMonth = document.form.month;
+		if(ExMonth.value =="")
+		{
+		alert("Please select expire month.");
+		ExMonth.focus();
+		return false;
+  
+		}
+  
+		//This is the information about the expire year of card
+		
+		var ExYear = document.form.year;
+		if(ExYear.value =="")
+		{
+ 
+		alert("Pleasse select expire year");
+		ExYear.focus();
+		return false;
+ 
+		}
+  
+  
+  
+		var Karate = document.getElementById("karate").checked;
+		var Judo = document.getElementById("judo").checked;
+		var Mt = document.getElementById("muay").checked;
+		var Box = document.getElementById("boxing").checked;
+		var BJJ = document.getElementById("bjj").checked;
+		var KickBoxing = document.getElementById("kick").checked;
+  
+  
+		if(Karate ==false && Judo == false  && Mt == false && Box == false && BJJ == false  && KickBoxing == false)
+		{
+		alert("Please select checkbox");
+		return false
+		}
+		else{
+		alert("Your form has been submitted.");
+		return true;
+		}
+		
+		
+		
+		
+
+		
+		
+}
+
+  
+  
+  
+  
+
+</script>
+<style>
+#container{
+width:1000px;
+margin-left:auto;
+margin-right:auto;
+background-color:white;
+}
+
+body{
+background-color:#26282b;
+}
+
+	li{
+	 display: inline;
+	 padding: 20px;
+	 font-family:courier;
+	 font-size: 20pt;
+	 background-color:black;
+	 color:white;
+	
+	}
+</style>
+
+</head>
+
+
+<body>
+<!--Jimmol Singh Final -->
+<div id = "container">
+<h1 style = "font-size:34pt; text-align:center;">Matrial Arts Training Center</h1>
+
+<ul style = "text-align:center" id = "navUL">
+			<a href = "index.html"><li>Home</li></a>
+			<a href = "service.html"><li>Service</li></a>
+			<a href ="calendar.html"><li>Calender</li></a>
+			<a href = "Form.html"><li>Join Us</li></a>
+		
+		</ul>
+		
+<center>
+<br/>
+<h1>Become a member!</h1>
+
+
+<!--final-->
+<form name = "form" onsubmit = "return validate()">
+	<!-- form information -->
+	<h3>Please enter the information required below.(Password must be greater than 8 character.)</h3>
+	<table>
+	<tr>
+	<td><p>First name: <input type = "text" name ="firstName" maxlength = "20"></p></td>
+	<td><p>Last name:  <input type = "text" name = "lastName" maxlength = "20"></p></td>
+	</tr>
+	<tr>
+	<td><p>Password:   <input type = "password" name = "pass" maxlength = "20"></p></td>
+	<td><p>Email: <input type ="text" name = "email" maxlength = "20"></p></td>
+	</tr>
+	<tr>
+	<td><p>Telephone: <input type = "text" name = "phone" maxlength = "11"></p></td>
+	</tr>
+	<tr>
+	
+	<td><p>Male: <input type = "radio" name = "gender"></p></td>
+	<td><p>Female: <input type = "radio" name = "gender"></p></td>
+	</tr>
+    </table>
+	 
+	 <h3>Please enter your address(Zip code must be the 5 digit number.)</h3>
+	 <p>Address: <input type ="text" name = "add" maxlength = "25"></p>
+	 <p>City: <input type = "text" name = "city" maxlength = "20"></p>
+	 <table>
+	 <tr>
+	<td> <p>State: <input type = "text" name= "state" maxlength = "2" size = "2"></p></td>
+	 <td><p>Zip Code:<input type = "text" name = "zip" maxlength = "5" size = "5"></p></td>
+	 </tr>
+	 </table>
+	 
+	 <!--payment information -->
+	 <h3>Please enter the required payment information below.</h3>
+	 <table>
+	 <tr>
+	 <td><p>Visa<input type ="radio" name = "card"></p></td>
+	<td> <p>American Express: <input type = "radio" name = "card"></p></td>
+	 <td><p>Discovery<input type = "radio" name ="card"></p></td>
+	 <td><p>Master Card<input type = "radio" name = "card"></p></td>
+	 </tr>
+	 </table>
+	 
+	 <table>
+	 <tr>
+	<td> <p>Card number<input type = "text" name = "cNum" maxlength = "20"></p></td>
+	 </tr>
+	 <tr>
+	 <td><p>CVS number<input type = "text" name ="sCode" maxlength = "3" size = "3"></p></td>
+	 </tr>
+	 <tr>
+	 <td> <p>Expire Month: <select name = "month"></p>
+	   <option></option>
+  <option>January</option>
+				 <option>February</option>
+                            <option>March</option>
+				 <option>April</option>
+				 <option>May</option>
+				 <option>June</option>
+                                 <option>July</option>
+				 <option>August</option>
+			         <option>September</option>
+				 <option>October</option>
+                                 <option>November</option>
+				 <option>December</option>
+			
+
+			</select></td>
+			
+			
+			<td><p>Expire Year: <select name = "year"></p>
+				
+	            <option></option>
+				<option>2018</option>		
+				<option>2019</option>
+				<option>2020</option>
+				<option>2021</option>
+				<option>2022</option>
+				<option>2023</option>
+				<option>2024</option>
+				<option>2025</option>
+			</select></td>
+	 
+	 </tr>
+	 </table>
+	 
+		<h3>Please select the type of style you wish to learn.</h3>
+	 <table>
+	 <tr>
+	     <td> <p>Muay Thai <input type = "checkbox" id = "muay"></p></td>
+	     <td> <p>Karate <input type = "checkbox" name = "checkbox" id = "karate"></p><td>
+	 </tr>  
+	  <tr>
+		  <td> <p>Judo<input type = "checkbox" name = "checkbox" id = "judo"></p></td>
+		   <td><p>Boxing <input type = "checkbox" name = "boxing" id = "boxing"></p></td>
+	   </tr>
+	   
+	   <tr>
+		  <td> <p>Kick-Boxing<input type = "checkbox" name = "kick" id = "kick"> </td>
+		   <td><p>Brazillian Jiu Jutsu <input type = "checkbox" name = "checkbox" id = "bjj"></td>
+		   
+		</tr>
+	 </table>
+	 
+	 <br/>
+	 <h3>Any comment? comment below!</h3>
+	 <textarea rows = "5" cols = "50"></textarea>
+	 <br/>
+	 
+	 <input type="submit" name = "submit" value = "submit">
+	 <input type="reset" name = "reset" value = "reset">
+</form></center>
+
+</div>
+</body>
+
+
+
+
+</html>
